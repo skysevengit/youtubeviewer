@@ -4,7 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production",
+    "build:dev": "webpack --mode development",
+    "watch": "npm run build:dev -- --watch",
+    "start": "node .",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -15,5 +21,30 @@
   "bugs": {
     "url": "https://github.com/skysevengit/youtubeviewer/issues"
   },
-  "homepage": "https://github.com/skysevengit/youtubeviewer#readme"
+  "homepage": "https://github.com/skysevengit/youtubeviewer#readme",
+  "dependencies": {
+    "babel-loader": "^8.1.0",
+    "core-js": "^3.8.1",
+    "express": "^4.17.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-router-dom": "^5.2.0",
+    "regenerator-runtime": "^0.13.7",
+    "styled-components": "^5.0.1",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "@babel/register": "^7.12.10",
+    "@storybook/addon-actions": "^6.1.11",
+    "@storybook/addon-links": "^6.1.11",
+    "@storybook/addons": "^6.1.11",
+    "@storybook/react": "^6.1.11",
+    "babel-plugin-styled-components": "^1.10.7"
+  }
 }
